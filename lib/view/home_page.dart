@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pratical_task/model/user_date.dart';
 
-
 import '../view_model/user_preference.dart';
 
 class HomePage extends StatefulWidget {
@@ -50,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                   ElevatedButton(
                     onPressed: () async {
                       await UserPreference().clearUser();
-                      Navigator.of(context).pop(); // Logout
+                      Navigator.of(context).pop();
                     },
                     child: Text("Logout"),
                   ),

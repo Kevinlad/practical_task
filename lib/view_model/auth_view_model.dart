@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:math';
+
 import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
@@ -79,7 +79,6 @@ class AuthViewModel extends GetxController {
   }
 
   void signUp() async {
-   
     print(gender);
     print(
         "${firstNameController.text} ${lastNameController.text} ${emailController.text} ${passwordController.text},${passwordController.text}");

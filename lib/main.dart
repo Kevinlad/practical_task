@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:pratical_task/view/login_screen.dart';
+
 import 'package:pratical_task/view/splash_screen.dart';
 
 void main() {

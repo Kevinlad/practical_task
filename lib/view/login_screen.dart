@@ -36,11 +36,11 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () {},
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 50),
               const Text(
                 'Login Your Account',
                 style: TextStyle(
-                  fontSize: 43,
+                  fontSize: 45,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                   return null;
                 },
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
               CustomTextField(
                 editingController: controller.passwordController,
                 hintText: 'Password',
@@ -83,22 +83,22 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
               Obx(() {
                 return controller.isLoading.value
                     ? Center(child: const CircularProgressIndicator())
                     : CustomButtom(
                         text: 'LOGIN',
                         onPressed: () {
-                          // if (_formKey.currentState?.validate() ?? false) {
+                          if (_formKey.currentState?.validate() ?? false) {
                           controller.login();
-                          // }
+                          }
                         },
                         color: Color(0xFFFF4201),
                         textColor: Colors.white,
                       );
               }),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

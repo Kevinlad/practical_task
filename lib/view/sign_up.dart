@@ -11,7 +11,7 @@ class RegisterScreen extends StatelessWidget {
 
   final ValueNotifier<String> gender = ValueNotifier<String>("Male");
   final controller = Get.put(AuthViewModel());
-  final _formKey = GlobalKey<FormState>(); 
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +44,7 @@ class RegisterScreen extends StatelessWidget {
                 const Text(
                   "Create your Account",
                   style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 45,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
