@@ -90,9 +90,9 @@ class LoginScreen extends StatelessWidget {
                     : CustomButtom(
                         text: 'LOGIN',
                         onPressed: () {
-                          if (_formKey.currentState?.validate() ?? false) {
-                            controller.login();
-                          }
+                          // if (_formKey.currentState?.validate() ?? false) {
+                          controller.login();
+                          // }
                         },
                         color: Color(0xFFFF4201),
                         textColor: Colors.white,

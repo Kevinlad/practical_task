@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
@@ -48,8 +49,10 @@ class AuthViewModel extends GetxController {
           "password": passwordController.text,
         }),
       );
+
       final responseJson = jsonDecode(response.body);
       print("Outside :${responseJson["data"]}");
+      print("login");
 
       if (response.statusCode == 200) {
         var token = responseJson["data"]['api_token'];
@@ -60,7 +63,7 @@ class AuthViewModel extends GetxController {
         await UserPreference()
             .saveUser(UserData.fromJson(responseJson["data"]));
         print(responseJson["data"]);
-        Get.to(HomePage());
+        Get.to(() => HomePage());
 
         Get.snackbar("Success", responseJson["message"],
             snackPosition: SnackPosition.BOTTOM);
@@ -76,9 +79,7 @@ class AuthViewModel extends GetxController {
   }
 
   void signUp() async {
-    if (gender.isEmpty) {
-      setGender("male");
-    }
+   
     print(gender);
     print(
         "${firstNameController.text} ${lastNameController.text} ${emailController.text} ${passwordController.text},${passwordController.text}");
